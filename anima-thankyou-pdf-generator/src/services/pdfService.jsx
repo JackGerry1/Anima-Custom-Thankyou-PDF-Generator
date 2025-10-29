@@ -1,11 +1,11 @@
 import { pdf } from "@react-pdf/renderer";
 import CustomThankYouPDF from "../components/CustomThankYouPDF";
-import { getThankYouMessage } from "../utils/thankYouMessage";
 
 // Generate PDF and trigger a download
 export async function generatePDF(firstName, lastName) {
-  const message = getThankYouMessage(firstName, lastName);
-  const blob = await pdf(<CustomThankYouPDF message={message} />).toBlob();
+  const blob = await pdf(
+    <CustomThankYouPDF firstName={firstName} lastName={lastName} />
+  ).toBlob();
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;

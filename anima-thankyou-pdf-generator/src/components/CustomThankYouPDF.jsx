@@ -7,12 +7,14 @@ const styles = StyleSheet.create({
   text: { fontSize: 16, marginTop: 20 },
 });
 
-function CustomThankYouPDF({ message }) {
+function CustomThankYouPDF({ firstName, lastName }) {
   return (
     <Document>
       <Page style={styles.page}>
         <Image style={styles.image} src={thankYouImage} />
-        <Text style={styles.text}>{message}</Text>
+        <Text style={styles.text}>
+          Thank you for supporting us, {firstName} {lastName}!
+        </Text>
       </Page>
     </Document>
   );
