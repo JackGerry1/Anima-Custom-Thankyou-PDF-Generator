@@ -1,7 +1,9 @@
+import ThankYouPage from './pages/ThankYouPage';
+
 function App() {
 
   return (
-    <h1>Hello world</h1>
+    <ThankYouPage></ThankYouPage>
   )
 }
 
