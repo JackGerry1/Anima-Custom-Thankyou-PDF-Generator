@@ -6,7 +6,6 @@ function ThankYouPage() {
     <>
       <Header></Header>
       <FormInput></FormInput>
-      <GeneratePDFButton></GeneratePDFButton>
     </>
   );
 }
