@@ -73,4 +73,7 @@ The following features were added to improve accessibility:
 - All form elements have associated labels for screen readers.
 - The application supports keyboard navigation.
 - There is enough colour contrast between text and background. 
-- It is responsive and works well on mobile devices. 
+- It is responsive and works well on mobile devices.
+
+## Demo Gif
+![Demo of feature](https://raw.githubusercontent.com/JackGerry1/Anima-Custom-Thankyou-PDF-Generator/main/src/github_assets/demo.gif)
