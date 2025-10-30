@@ -1,5 +1,6 @@
 import { useState } from "react";
 import GeneratePDFButton from "./GeneratePDFButton";
+import "../styles/FormInput.css";
 
 function FormInput() {
   const [formData, setFormData] = useState({ firstName: "", lastName: "" });
@@ -13,30 +14,36 @@ function FormInput() {
     e.preventDefault();
   };
 
+  const firstName =
+    formData.firstName.charAt(0).toUpperCase() + formData.firstName.slice(1);
+  const lastName =
+    formData.lastName.charAt(0).toUpperCase() + formData.lastName.slice(1);
+
   return (
     <form onSubmit={handleSubmit}>
+      <label htmlFor="firstName">First Name</label>
       <input
         type="text"
+        id="firstName" 
         name="firstName"
-        placeholder="First Name"
+        placeholder="Enter your first name"
         value={formData.firstName}
         onChange={handleChange}
         required
       />
 
+      <label htmlFor="lastName">Last Name</label>
       <input
         type="text"
+        id="lastName"
         name="lastName"
-        placeholder="Last Name"
+        placeholder="Enter your last name"
         value={formData.lastName}
         onChange={handleChange}
         required
       />
 
-      <GeneratePDFButton
-        firstName={formData.firstName.charAt(0).toUpperCase() + formData.firstName.slice(1)}
-        lastName={formData.lastName.charAt(0).toUpperCase() + formData.lastName.slice(1)}
-      />
+      <GeneratePDFButton firstName={firstName} lastName={lastName} />
     </form>
   );
 }

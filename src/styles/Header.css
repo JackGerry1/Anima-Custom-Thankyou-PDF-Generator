@@ -1,0 +1,12 @@
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  color: #1e3a8a;
+}
+
+header p {
+  color: #374151;
+}

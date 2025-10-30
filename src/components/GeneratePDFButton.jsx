@@ -1,4 +1,5 @@
 import { generatePDF } from "../services/pdfService";
+import "../styles/GeneratePDFButton.css";
 
 function GeneratePDFButton({ firstName, lastName }) {
   const handleClick = () => {
@@ -7,7 +8,11 @@ function GeneratePDFButton({ firstName, lastName }) {
     }
   };
 
-  return <button onClick={handleClick}>Download Custom PDF</button>;
+  return (
+    <button disabled={!firstName || !lastName} onClick={handleClick}>
+      Download Custom PDF
+    </button>
+  );
 }
 
 export default GeneratePDFButton;
