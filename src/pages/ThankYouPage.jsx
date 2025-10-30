@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import FormInput from "../components/FormInput";
-import GeneratePDFButton from "../components/GeneratePDFButton";
+
 function ThankYouPage() {
   return (
     <>
